@@ -1,3 +1,5 @@
+
+
 package com.tnsif.Student_ServiceSubiksha;
 
 import java.util.List;
@@ -21,7 +23,7 @@ public class StudentService {
 	{
 		repo.save(stud);
 	}
-	//review the particular record
+	//retrieving the particular record
 	public Student get(Integer id)
 	{
 		return repo.findById(id).get();

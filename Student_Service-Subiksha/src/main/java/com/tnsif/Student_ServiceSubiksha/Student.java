@@ -6,12 +6,12 @@ import jakarta.persistence.Id;
 @Entity
 public class Student {
 	@Id
-	@Column(name="Cid")
+	@Column(name="Sid")
 	private int id;
-	@Column(name="Cname")
+	@Column(name="Sname")
 	private String name;
-	@Column(name="Caddress")
-	private int address;
+	@Column(name="Saddress")
+	private String address;
 	
 	public Student() {
 		super();
@@ -41,19 +41,15 @@ public class Student {
 		this.name = name;
 	}
 
-	public int getAddress() {
+	public String getAddress() {
 		return address;
 	}
 
-	public void setAddress(int address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
 
-	@Override
-	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", address=" + address + "]";
-	}
-	
 	
 
+	
 }

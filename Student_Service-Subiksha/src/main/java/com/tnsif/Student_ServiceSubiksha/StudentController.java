@@ -19,7 +19,7 @@ public class StudentController
 		return stud.listAll();
 	}
 	@PostMapping("/studentservice")
-	public void add(@RequestBody Customer stud1)
+	public void add(@RequestBody Student stud1)
 	{
 		stud.save(stud1);
 	}
@@ -29,13 +29,13 @@ public class StudentController
 		try
 		{
 			Student s=stud.get(id);
-			return new ResponseEntity<Student>(c,HttpStatus.OK);
+			return new ResponseEntity<Student>(s,HttpStatus.OK);
 		}
 		
 
 		catch(NoResultException e)
 		{
-			return new ResponseEntity<Student>(c,HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Student>(s,HttpStatus.NOT_FOUND);
 		}
 	}
 	@DeleteMapping("/studentservice/{id}")
@@ -64,3 +64,4 @@ public class StudentController
 
 	
 }
+
